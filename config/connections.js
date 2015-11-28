@@ -91,22 +91,22 @@ module.exports.connections = {
   sailsCbes: {
       adapter: 'sails-cbes',
       cb: (function(){
-          //if (process.env.NODE_ENV == 'production') {
-          //    return {
-          //        host: '127.0.0.1',
-          //        port: 8091,
-          //        user: 'root',
-          //        pass: '_dataminer20)*',
-          //        version: '2.2.0',
-          //        operationTimeout: 1000 * 60,
-          //        bucket: {
-          //            pass: '',
-          //            name: 'udk'
-          //        }
-          //    };
-          //} else {
+          if (process.env.NODE_ENV == 'production') {
               return {
                   host: '127.0.0.1',
+                  port: 8091,
+                  user: 'root',
+                  pass: '_dataminer20)*',
+                  version: '2.2.0',
+                  operationTimeout: 1000 * 60,
+                  bucket: {
+                      pass: '',
+                      name: 'udk'
+                  }
+              };
+          } else {
+              return {
+                  host: '192.168.33.10',
                   port: 8091,
                   user: 'root',
                   pass: 'root123',
@@ -117,29 +117,29 @@ module.exports.connections = {
                       name: 'ittool'
                   }
               };
-          //}
+          }
       })(),
 
       es: (function(){
-          //if (process.env.NODE_ENV == 'production') {
-          //    return {
-          //        host :            ['127.0.0.1:9200'],
-          //        log  :            'error',
-          //        index:            'udk',
-          //        numberOfShards:   5,
-          //        numberOfReplicas: 1,
-          //        requestTimeout:   1000 * 60
-          //    };
-          //} else {
+          if (process.env.NODE_ENV == 'production') {
               return {
-                  host :            ['127.0.0.1:9200', '192.168.33.10:9200'],
+                  host :            ['127.0.0.1:9200'],
+                  log  :            'error',
+                  index:            'udk',
+                  numberOfShards:   5,
+                  numberOfReplicas: 1,
+                  requestTimeout:   1000 * 60
+              };
+          } else {
+              return {
+                  host :            ['192.168.33.10:9200'],
                   log  :            'error',
                   index:            'ittool',
                   numberOfShards:   5,
                   numberOfReplicas: 1,
                   requestTimeout:   1000 * 60
               };
-          //}
+          }
       })()
   }
 };

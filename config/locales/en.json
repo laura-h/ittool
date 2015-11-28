@@ -1,4 +1,25 @@
 {
-	"Welcome": "Welcome",
-	"A brand new app.": "A brand new app."
+  "app.title": "IT Tool",
+  "adsg.index.title": "Active Directory / Secutory Groups",
+  "adsg.index.table.username": "Username",
+  "adsg.index.table.security_group": "Security group",
+  "adsg.index.table.folder_names": "Folders",
+  "adsg.index.table.actions.title": "Actions",
+  "adsg.index.table.actions.logs": "View logs",
+  "adsg.index.table.actions.edit": "Edit",
+  "adsg.index.table.actions.delete": "Delete",
+
+  "license.index.title": "Licenses inventory",
+  "license.index.table.software": "Software name",
+  "license.index.table.software_type": "Software type",
+  "license.index.table.key": "License key",
+  "license.index.table.pc_number": "PC number",
+  "license.index.table.assigned_to": "Assigned to",
+  "license.index.table.expiration_date": "Expiration date",
+  "license.index.table.actions.title": "Actions",
+  "license.index.table.actions.edit": "Edit",
+  "license.index.table.actions.delete": "Delete"
+
+
+
 }
